@@ -9,9 +9,9 @@ namespace _5_print_comb
             for (int n = 0; n < 100; n++)
             {
                 if (n < 99)
-                    Console.Write("{0}, ", n);
+                    Console.Write("{0:D2}, ", n);
                 else
-                    Console.WriteLine(n);
+                    Console.WriteLine("{0:D2}", n);
             }
         }
     }
