@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace _3_writeline
+namespace _2_print_alphabet
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\"Programming is like building a multilingual puzzle");
+            for (byte l = 97; l < 123; l++)
+                Console.Write((char)l);
         }
     }
 }

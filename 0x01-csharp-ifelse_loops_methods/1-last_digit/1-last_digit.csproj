@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>_11_concat_edges</RootNamespace>
+    <RootNamespace>_1_last_digit</RootNamespace>
   </PropertyGroup>
 
 </Project>
