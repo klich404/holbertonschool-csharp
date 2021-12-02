@@ -11,11 +11,11 @@ class MyQueue
         Console.WriteLine("Number of items: {0}", aQueue.Count);
 
         if (count == 0)
-            Console.WriteLine("Stack is empty");
+            Console.WriteLine("Queue is empty");
         else
-            Console.WriteLine("Top item: {0}", aQueue.Peek());
+            Console.WriteLine("First item: {0}", aQueue.Peek());
 
-        Console.WriteLine("Stack contains \"{0}\": {1}", search, isIn);
+        Console.WriteLine("Queue contains \"{0}\": {1}", search, isIn);
 
         if (isIn == true)
             while (aQueue.Dequeue() != search)
