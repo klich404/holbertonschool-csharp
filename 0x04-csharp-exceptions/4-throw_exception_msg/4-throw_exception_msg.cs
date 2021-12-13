@@ -4,6 +4,6 @@ class Except
 {
     public static void ThrowMsg(string msg)
     {
-        throw new Exception("The task fail succesfully");
+        throw new Exception("C is fun");
     }
 }
