@@ -2,11 +2,13 @@
 
 namespace Enemies
 {
-    ///<summary>Zombie</summary>
+    ///<summary>A zombie class</summary>
     public class Zombie
     {
-        int health;
+        ///<summary>health counter for a zombie obj</summary>
+        public int health;
 
+        ///<summary>A zombie initialization</summary>
         public Zombie()
         {
             health = 0;
