@@ -4,7 +4,7 @@ class Obj
 {
     public static bool IsOnlyASubclass(Type derivedType, Type baseType)
     {
-        if (baseType.IsSubclassOf(derivedType) == true)
+        if (derivedType.IsSubclassOf(baseType) == true)
             return true;
         return false;
     }
