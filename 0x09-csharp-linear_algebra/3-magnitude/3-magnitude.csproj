@@ -5,7 +5,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>_3_magnitude</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
 
