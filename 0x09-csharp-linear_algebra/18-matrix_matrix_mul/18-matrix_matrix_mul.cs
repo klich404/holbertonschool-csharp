@@ -8,24 +8,24 @@ class VectorMath
     public static double[,] Multiply(double[,] matrix1, double[,] matrix2)
     {
         double[,] matrixError = new double[,] {{-1}};
-        int height = matrix.GetLength(0);
-        int width = matrix.GetLength(1);
+        double[,] matrixResult;
+        int height = matrix1.GetLength(1);
+        int width = matrix2.GetLength(0);
+        double aux;
 
-        if (height == 2 && width == 2)
-        {
-            for (int x = 0; x < height; x++)
-                for (int y = 0; y < width; y++)
-                    matrix[x, y] = matrix[x, y] * scalar;
-            return matrix;
-        }
-        else if (height == 3 && width == 3)
-        {
-            for (int x = 0; x < height; x++)
-                for (int y = 0; y < width; y++)
-                    matrix[x, y] = matrix[x, y] * scalar;
-            return matrix;
-        }
+        if (height == width)
+            matrixResult = new double[matrix1.GetLength(0), matrix2.GetLength(1)];
         else
             return matrixError;
+
+        for (int i = 0; i < matrixResult.GetLength(0); i++)
+            for (int j = 0; j < matrixResult.GetLength(1); j++)
+            {
+                aux = 0;
+                for (int k = 0; k < height; k++)
+                    aux += matrix1[i, k] * matrix2[k, j];
+                matrixResult[i ,j] = aux;
+            }
+        return matrixResult;
     }
 }
