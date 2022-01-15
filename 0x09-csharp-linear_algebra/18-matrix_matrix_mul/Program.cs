@@ -4,8 +4,8 @@ using System.Collections.Generic;
 ///<summary>A VectorMath class</summary>
 class VectorMath
 {
-    ///<summary>Multiplies a matrix and a scalar and returns the resulting matrix</summary>
-    public static double[,] MultiplyScalar(double[,] matrix, double scalar)
+    ///<summary>Multiplies two matrices and returns the resulting matrix</summary>
+    public static double[,] Multiply(double[,] matrix1, double[,] matrix2)
     {
         double[,] matrixError = new double[,] {{-1}};
         int height = matrix.GetLength(0);
