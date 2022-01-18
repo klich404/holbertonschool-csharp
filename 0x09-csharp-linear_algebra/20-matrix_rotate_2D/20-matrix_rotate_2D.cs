@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 ///<summary>A VectorMath class</summary>
-class VectorMath
+class MatrixMath
 {
     ///<summary>Rotates a square 2D matrix by a given angle in radians and returns the resulting matrix</summary>
     public static double[,] Rotate2D(double[,] matrix, double angle)
@@ -20,7 +20,7 @@ class VectorMath
             {
                 aux = 0;
                 for (int k = 0; k < 2; k++)
-                    aux += Math.Round(matrix1[i, k] * matrix2[k, j], 2);
+                    aux += Math.Round(matrix[i, k] * rotation[k, j], 2);
                 matrixResult[i ,j] = aux;
             }
         return matrixResult;

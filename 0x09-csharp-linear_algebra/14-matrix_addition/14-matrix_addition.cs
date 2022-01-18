@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 ///<summary>A VectorMath class</summary>
-class VectorMath
+class MatrixMath
 {
     ///<summary>Adds two matrices and returns the resulting matrix</summary>
     public static double[,] Add(double[,] matrix1, double[,] matrix2)

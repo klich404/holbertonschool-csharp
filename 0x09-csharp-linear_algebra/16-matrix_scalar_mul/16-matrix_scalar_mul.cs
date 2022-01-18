@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 ///<summary>A VectorMath class</summary>
-class VectorMath
+class MatrixMath
 {
     ///<summary>Multiplies a matrix and a scalar and returns the resulting matrix</summary>
     public static double[,] MultiplyScalar(double[,] matrix, double scalar)
