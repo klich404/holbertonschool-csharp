@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 ///<summary>A VectorMath class</summary>
-class VectorMath
+public class VectorMath
 {
     ///<summary>Calculates and returns the length of a given vector</summary>
     public static double Magnitude(double[] vector)
