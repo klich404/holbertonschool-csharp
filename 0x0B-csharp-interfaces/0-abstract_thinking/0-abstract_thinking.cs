@@ -1,7 +1,7 @@
 ﻿using System;
 
 ///<summary> Base class </summary>
-abstract class Base
+public abstract class Base
 {
     ///<summary> Name of instance </summary>
     public string name;
