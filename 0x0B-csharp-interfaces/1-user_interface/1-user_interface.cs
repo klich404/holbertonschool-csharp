@@ -7,36 +7,20 @@ interface IInteractive
 
 interface IBreakable
 {
-    int durability 
-    {
-        get;
-        set;
-    }
+    int durability { get; set; }
     void Break();
 }
 
 interface ICollectable
 {
-    bool isCollected
-    {
-        get;
-        set;
-    }
+    bool isCollected { get; set; }
     void Collect();
 }
 
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-    public int durability
-    { 
-        get;
-        set; 
-    }
-    public bool isCollected
-    {
-        get;
-        set;
-    }
+    public int durability { get; set; }
+    public bool isCollected { get; set; }
     public void Interact()
     {
 
