@@ -4,12 +4,12 @@
 public abstract class Base
 {
 	/// <summary> name propert </summary>
-	public string name { get; set; }
+	public string name;
 
 	/// <summary> override of toString method</summary>
 	public override string ToString()
 	{
-		return $"{name} is a {this.GetType()}";
+		return (this.name + " is a " + this.GetType().ToString());
 	}
 }
 
@@ -33,6 +33,7 @@ interface ICollectable
 /// <summary> TestObject class that inherits from Base and IIntereactive</summary>
 public class Door : Base, IInteractive
 {
+    ///<summary> new door </summary>
 	public Door(string nam = "Door")
     {
         name = nam;
