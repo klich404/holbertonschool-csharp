@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
 
 /// <summary> Base abstract class</summary>
 public abstract class Base
@@ -109,5 +111,25 @@ class Key : Base, ICollectable
         }
         else
             Console.WriteLine("You have already picked up the {0}.", name);
+    }
+}
+
+class RoomObjects
+{
+    ///<summary> 
+    /// IterateAction method list all object and execute methods depending on
+    /// what interface that item implements
+    ///</summary>
+    public static void IterateAction(List<Base> roomObjects, Type type)
+    {
+        foreach (Base item in roomObjects)
+        {
+            if (type == typeof(IInteractive) && item is IInteractive)
+                ((IInteractive)item).Interact();
+            else if (type == typeof(IBreakable) && item is IBreakable)
+                ((IBreakable)item).Break();
+            else if (type == typeof(ICollectable) && item is ICollectable)
+                ((ICollectable)item).Collect();
+        }
     }
 }
