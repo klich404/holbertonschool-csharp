@@ -1,58 +1,78 @@
 ﻿using System;
 
 /// <summary>
-/// A base class for all of the game objects
+/// Base - abstract class
 /// </summary>
-abstract class Base
+public abstract class Base
 {
-    public string name { get; set; }
+	/// <summary>
+	/// name - public property
+	/// </summary>
+	public string name { get; set; }
 
-    public override string ToString()
-    {
-        return $"{name} is a {this.GetType().Name}";
-    }
+	/// <summary>
+	/// ToString - override of 'ToString'
+	/// </summary>
+	/// <returns>'name' is a 'type'</returns>
+	public override string ToString()
+	{
+		return $"{name} is a {this.GetType()}";
+	}
 }
 
-/// <summary>
-/// Defines the properties of an interactive object
-/// </summary>
 interface IInteractive
 {
-    void Interact();
+	void Interact();
 }
 
-/// <summary>
-/// Defines the properties of a breakable object
-/// </summary>
 interface IBreakable
 {
-    int durability { get; set; }
+	int durability { get; set; }
+	void Break();
 }
 
-/// <summary>
-/// Defines the properties of a collectable object
-/// </summary>
 interface ICollectable
 {
-    bool isCollected { get; set; }
-    void Collect();
+	bool isCollected { get; set; }
+	void Collect();
 }
 
 /// <summary>
-/// A test object for inheriting interfaces
+/// TestObject - class to test inherits from abstract class and interfaces
 /// </summary>
-class TestObject : Base, IInteractive, IBreakable, ICollectable
+public class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-    public int durability { get; set; }
-    public bool isCollected { get; set; }
-    
-    public void Interact()
-    {
+	/// <summary>
+	/// durability property
+	/// </summary>
+	public int durability { get; set; }
 
-    }
+	/// <summary>
+	/// isCollected property
+	/// </summary>
+	public bool isCollected { get; set; }
 
-    public void Collect()
-    {
+	/// <summary>
+	/// Interact implementation
+	/// </summary>
+	public void Interact()
+	{
+		return;
+	}
 
-    }
+	/// <summary>
+	/// Break implementation
+	/// </summary>
+	public void Break()
+	{
+		return;
+	}
+
+	/// <summary>
+	/// Collect implementation
+	/// </summary>
+	public void Collect()
+	{
+		return;
+	}
 }
