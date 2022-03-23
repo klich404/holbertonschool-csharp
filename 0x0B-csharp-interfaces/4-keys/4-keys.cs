@@ -68,11 +68,11 @@ public class Decoration : Base, IInteractive, IBreakable
     public void Interact()
     {
         if (durability <= 0)
-            Console.WriteLine("The {0} has been broken.", durability);
+            Console.WriteLine("The {0} has been broken.", name);
         else if (isQuestItem == true)
-            Console.WriteLine("You look at the {0}. There's a key inside.", this.name);
+            Console.WriteLine("You look at the {0}. There's a key inside.", name);
         else
-            Console.WriteLine("You look at the {0}. Not much to see here.", this.name);
+            Console.WriteLine("You look at the {0}. Not much to see here.", name);
     }
 
     ///<summary> Break method call when the object has been broken </summary>
@@ -80,10 +80,36 @@ public class Decoration : Base, IInteractive, IBreakable
     {
         durability--;
         if (durability > 0)
-            Console.WriteLine("You hit the {0}. It cracks.", this.name);
+            Console.WriteLine("You hit the {0}. It cracks.", name);
         else if (durability == 0)
-            Console.WriteLine("You smash the {0}. What a mess.", this.name);
+            Console.WriteLine("You smash the {0}. What a mess.", name);
         else
-            Console.WriteLine("The {0} is already broken.", this.name);
+            Console.WriteLine("The {0} is already broken.", name);
     }
+}
+
+class Key : Base, ICollectable
+{
+    ///<summary> isCollected property </summary>  
+    public bool isCollected { get; set; }
+
+    public Key(string name = "Key", bool isCollected = false)
+    {
+        this.name = name;
+        this.isCollected = isCollected;
+    }
+
+    ///<summary> Collect method call when the object has been broken </summary>
+	public void Collect()
+    {
+        if (isCollected == false)
+        {
+            isCollected = true;
+            Console.WriteLine("You pick up the {0}.", name);
+        }
+        else
+            Console.WriteLine("You have already picked up the {0}.", name);
+    }
+
+
 }
