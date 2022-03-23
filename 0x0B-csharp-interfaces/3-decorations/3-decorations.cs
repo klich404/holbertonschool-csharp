@@ -68,11 +68,11 @@ public class Decoration : Base, IInteractive, IBreakable
     public void Interact()
     {
         if (durability <= 0)
-            Console.WriteLine("The {0} has been broken.", durability);
+            Console.WriteLine("The {0} has been broken.", name);
         else if (isQuestItem == true)
-            Console.WriteLine("You look at the {0}. There's a key inside.", this.name);
+            Console.WriteLine("You look at the {0}. There's a key inside.", name);
         else
-            Console.WriteLine("You look at the {0}. Not much to see here.", this.name);
+            Console.WriteLine("You look at the {0}. Not much to see here.", name);
     }
 
     ///<summary> Break method call when the object has been broken </summary>
@@ -80,10 +80,10 @@ public class Decoration : Base, IInteractive, IBreakable
     {
         durability--;
         if (durability > 0)
-            Console.WriteLine("You hit the {0}. It cracks.", this.name);
-        else if (durability == 0)
-            Console.WriteLine("You smash the {0}. What a mess.", this.name);
-        else
-            Console.WriteLine("The {0} is already broken.", this.name);
+            Console.WriteLine("You hit the {0}. It cracks.", name);
+        if (durability == 0)
+            Console.WriteLine("You smash the {0}. What a mess.", name);
+        if (durability < 0)
+            Console.WriteLine("The {0} is already broken.", name);
     }
 }
