@@ -1,12 +1,13 @@
 ﻿using System;
 
-///<summary> The base clase </summary>
+///<summary> The base class </summary>
 public class BaseClass
 {
     public string id { get; set;}
     public DateTime date_created { get; set; }
     public DateTime date_updated { get; set; }
 
+    ///<summary> BaseClass constructor </summary>
     public BaseClass(String id = null, DateTime date_created = default(DateTime), DateTime date_updated = default(DateTime))
     {
         if (id == null)
