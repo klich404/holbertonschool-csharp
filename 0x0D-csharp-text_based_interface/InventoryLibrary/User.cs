@@ -1,13 +1,16 @@
 using System;
 
-///<summary> User class </summary>
-public class User : BaseClass
+namespace InventoryLibrary
 {
-    public string name { get; set; }
-
-    ///<summary> User constructor </summary>
-    public User(string name = "name")
+    ///<summary> User class </summary>
+    public class User : BaseClass
     {
-        this.name = name;
+        public string name { get; set; }
+
+        ///<summary> User constructor </summary>
+        public User(string name = "name")
+        {
+            this.name = name;
+        }
     }
 }
