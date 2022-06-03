@@ -3,8 +3,11 @@
 ///<summary>Generic class</summary>
 public class Queue<T>
 {
+    ///<summary>head of the queue</summary>
     public Node head = null;
+    ///<summary>tail of the queue</summary>
     public Node tail = null;
+    ///<summary>count of the queue</summary>
     public int count = 0;
 
     ///<summary>Creates a new node</summary>
@@ -39,9 +42,12 @@ public class Queue<T>
     ///<summary>Node constructor</summary>
     public class Node
     {
+        ///<summary>value of a node</summary>
         public T value = default(T);
+        ///<summary>next node</summary>
         public Node next = null;
 
+        ///<summary>node constructor</summary>
         public Node(T t)
         {
             value = t;
